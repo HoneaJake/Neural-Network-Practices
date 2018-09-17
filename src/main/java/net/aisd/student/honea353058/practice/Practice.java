@@ -26,13 +26,12 @@ public class Practice {
         network.reset();
 
         // create training data
-
         MLDataSet trainingSet = new BasicMLDataSet(new double[][]{{1.0}, {0.75}, {0.0}, {0.25}, {0.5}}, new double[][]{{1.0}, {0.75}, {0.0}, {0.25}, {0.5}});
 
         // train the neural network
         final ResilientPropagation train = new ResilientPropagation(network, trainingSet);
 
-        for (int i = 0; i < 100000; i++)
+        for (int i = 0; i < 1000; i++)
             train.iteration();
 
         train.finishTraining();
